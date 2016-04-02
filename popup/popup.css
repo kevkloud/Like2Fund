@@ -12,6 +12,8 @@ body {
 #titletext {
   padding: 8px 8px 2px 0px;
   text-align: center;
+  background: #ffe566
+  border-bottom: 1px solid #E9E9E9;
 }
 .logo {
   cursor: pointer;

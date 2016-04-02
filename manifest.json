@@ -4,7 +4,7 @@
   "name": "Like2Fund",
   "version": "1.0",
   "description": "Like2Fund",
-  "options_page": "account/index.html",
+  "options_page": "options/index.html",
   
   "icons": {
     "16": "assets/icon.png",
