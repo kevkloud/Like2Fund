@@ -3,6 +3,7 @@
   <head>
     <title>Like2Fund</title>
     <link rel="stylesheet" href="popup.css" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <script src="../jquery/jquery.min.js"></script>
     <script data-main="../lib/capital_one" src="../lib/require-jquery.js"></script>
     <script src="popup.js"></script>
@@ -10,13 +11,13 @@
   <body style="overflow:hidden;">
     <div id="wrapper">
       <div id="menu-items">
-        <div id="titletext" style="background: #ffe566">
+        <div id="titletext" style="background: #ffe566; border-bottom: 1px solid #E9E9E9;">
           <img src="../assets/logo.png" class="logo" />
         </div>
 
         <div id="account_balance"></div>
-
-        <div id="donation_statistics" class="box">
+        
+        <div id="donation_statistics" class="menu-item">
               <div style="padding:2px 0px 0px 2px;">
                 <div id="donation_statistics_header" class="header">You've donated:</div>
                   <div id="donations_today">
@@ -31,7 +32,9 @@
               </div>
         </div>
 
-        <div id="account_menu_item" class="menu-item">Account</div>
+        <div id="separator1" class="separator">
+
+        <div id="account_menu_item" class="menu-item">Options</div>
 
         <div class="separator"></div>
 

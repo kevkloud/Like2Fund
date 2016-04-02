@@ -37,7 +37,7 @@ $(function() {
   
 
   $("#account_menu_item").click(function() {
-      BG.openTab("../account/index.html");
+      BG.openTab("../options/index.html");
       closeAndReloadPopup();
   });
 
