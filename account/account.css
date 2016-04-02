@@ -56,10 +56,16 @@ a:hover {
   padding-top: 55px;
 }
 
+#graphs {
+  padding-top:150px ;
+}
+
 .wrap {
   position: relative;
   margin: 0px auto;
   max-width: 1025px;
   padding: 0px 10px;
 }
+
+
 
