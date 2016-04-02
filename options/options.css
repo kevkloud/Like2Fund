@@ -33,6 +33,59 @@ ul {
   -webkit-margin-before: 0em;
 }
 
+section {
+    height: 200px;
+    background: aqua;
+    margin: auto;
+    margin: 40px;
+}
+div#left_top {
+    width: 50%;
+    height: 200px;
+    background: red;
+    float: left;
+    padding-right: 20px;
+}
+div#right_top {
+    margin-left: 50%;
+    height: 200px;
+    background: black;
+    padding-left: 20px;
+}
+
+div#account_stats {
+  height: 200px;
+  background: green;
+  margin: 0px 40px 40px 40px;
+  position:relative;
+}
+
+div#your_posts {
+  height: 100%;
+  width: 100%;
+  background: orange;
+  position:relative;
+}
+
+div#payment_history {
+  height: 100%;
+  width: 100%;
+  background: orange;
+  position:relative;
+}
+
+div.container_header {
+  height: 40px;
+  background: #FFE566;
+}
+
+div.container_footer {
+  height: 5px;
+  background: #FFE566;
+  position:absolute;
+  bottom:0px;
+}
+
 ul#nav-items li{
   display: inline;
   font-size: 20px;
@@ -47,7 +100,7 @@ a:hover {
 
 #header {
   background: #FFE566;
-  position: fixed;
+  position: relative;
   left: 0px;
   top: 0px;
   right: 0px;
