@@ -19,16 +19,21 @@ body {
   width: 45%;
 }
 .box {
-  margin: 5px 3px 5px 0px;
+  margin: 0px 3px 5px 0px;
   background: #f7f6f2;
   padding: 10px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.10);
+}
+.separator {
+  width: 100%;
+  border-top: 2px groove white;
+  margin: 5px -5px 5px -3px;
 }
 .header {
   font-weight: bold;
 }
 .money_text {
-  color: #00E500;
+  color: #6BA12C;
 }
 .menu-status-italic {
   padding: 4px 2px 0px 8px;
