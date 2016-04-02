@@ -24,3 +24,22 @@ body {
   padding: 10px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.10);
 }
+.header {
+  font-weight: bold;
+}
+.money_text {
+  color: #00E500;
+}
+.menu-status-italic {
+  padding: 4px 2px 0px 8px;
+  font-style: italic;
+  display: none;
+ }
+ .menu-item {
+  padding: 3px 4px 3px 8px;
+  cursor: pointer;
+}
+.menu-item:hover {
+  -webkit-transition: all 0.3s ease-out;
+  background: #F2F2F2;
+}

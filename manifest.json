@@ -5,11 +5,21 @@
   "version": "1.0",
   "description": "Like2Fund",
   
+  "background": {
+    "scripts": [
+      "jquery/jquery.min.js",
+      "background.js"
+    ]
+  },
+
   "browser_action": {
     "default_icon": "globe.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup/popup.html"
   },
+
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "background",
+    "tabs"
   ]
 }
