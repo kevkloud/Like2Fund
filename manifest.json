@@ -27,7 +27,8 @@
   "permissions": [
     "activeTab",
     "background",
-    "tabs"
+    "tabs",
+    "https://ajax.googleapis.com/"
   ],
 
   "web_accessible_resources": [
@@ -36,5 +37,14 @@
     "jquery/css/images/ui-icons_d8e7f3_256x240.png",
     "jquery/css/jquery-ui.custom.css",
     "jquery/css/override-page.css"
+  ],
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "css": ["lib/fbStyle.css"],
+      "js": ["lib/jquery-2.2.2.js", "lib/fbScript.js"],
+      "run_at" : "document_end"
+    }
   ]
 }
