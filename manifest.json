@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Like2Fund",
+  "version": "1.0",
+  "description": "Like2Fund",
+  
+  "browser_action": {
+    "default_icon": "globe.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
