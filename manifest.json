@@ -15,6 +15,13 @@
   "background": {
     "scripts": [
       "jquery/jquery.min.js",
+      "lib/jquery-2.2.2.js","lib/require-jquery.js",
+            "lib/capital_one.js",
+            "lib/account.js",
+             "lib/atm.js", "lib/customer.js", 
+             "lib/bills.js","lib/branch.js",
+             "lib/deposit.js","lib/withdrawal.js",
+             "lib/merchant.js","lib/purchase.js",
       "background.js"
     ]
   },
@@ -46,7 +53,15 @@
     {
       "matches": ["https://www.facebook.com/*"],
       "css": ["lib/fbStyle.css"],
-      "js": ["lib/jquery-2.2.2.js", "lib/fbScript.js"],
+      "js": ["lib/jquery-2.2.2.js","lib/require-jquery.js",
+            "lib/capital_one.js",
+            "lib/account.js",
+             "lib/atm.js", "lib/customer.js", 
+             "lib/bills.js","lib/branch.js",
+             "lib/deposit.js","lib/withdrawal.js",
+             "lib/merchant.js","lib/purchase.js",
+
+             "lib/fbScript.js"],
       "run_at" : "document_end"
     }
   ]
