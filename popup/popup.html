@@ -4,6 +4,7 @@
     <title>Like2Fund</title>
     <link rel="stylesheet" href="popup.css" />
     <script src="../jquery/jquery.min.js"></script>
+    <script data-main="../lib/capital_one" src="../lib/require-jquery.js"></script>
     <script src="popup.js"></script>
   </head>
   <body style="overflow:hidden;">
@@ -12,6 +13,8 @@
         <div id="titletext" style="background: #ffe566">
           <img src="../assets/logo.png" class="logo" />
         </div>
+
+        <div id="account_balance"></div>
 
         <div id="donation_statistics" class="box">
               <div style="padding:2px 0px 0px 2px;">
@@ -29,6 +32,10 @@
         </div>
 
         <div id="account_menu_item" class="menu-item">Account</div>
+
+        <div class="separator"></div>
+
+        <div><button id="deposit">Deposit $100.00</button></div>
 
       </div>
     </div>
