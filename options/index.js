@@ -1,3 +1,8 @@
+let myAccountID = '5700296435b13979061e7069';
+let weekInMilli = 604800000;
+let dayInMilli = 86400000;
+let oneHundred = 100;
+
 function load_options() {
     // Check or uncheck each option.
     BGcall("get_settings", function(settings) {
@@ -119,10 +124,10 @@ function displayVersionNumber() {
   } catch (ex) {} // silently fail
 }
 
-BGcall("storage_get", "userid", function(userId) {
-    var paymentHREFhref = "https://getadblock.com/pay/?source=O&u=" + userId;
-    $("#paymentlink").attr("href", paymentHREFhref);
-});
+// BGcall("storage_get", "userid", function(userId) {
+//     var paymentHREFhref = "https://getadblock.com/pay/?source=O&u=" + userId;
+//     $("#paymentlink").attr("href", paymentHREFhref);
+// });
 
 
 function displayTranslationCredit() {
@@ -172,20 +177,74 @@ function displayTranslationCredit() {
     }
 }
 
-if (SAFARI && LEGACY_SAFARI) {
-  if (navigator.appVersion.indexOf("Mac OS X 10_5_") !== -1) {
-    // Safari 5.1 isn't available on Leopard (OS X 10.5). Don't urge the users to upgrade in this case.
-  } else {
-    $("#safari50_updatenotice").show();
-  }
+function setDonationValues() {
+  $.get('https://burning-torch-5051.firebaseio.com/donations.json', function(success, error) {
+    if (success) {
+      console.log(success);
+
+      var donatedToday = 0;
+      var donatedThisWeek = 0;
+      var donatedToDate = 0;
+      var receivedToday = 0;
+      var receivedThisWeek = 0;
+      var receivedToDate = 0;
+
+      for (var key in success) {
+        var donation = success[key];
+
+        if (donation.senderID === myAccountID) {
+          donatedToDate += donation.amount;
+
+          if (donation.time > (Date.now() - dayInMilli)) {
+            donatedToday += donation.amount;
+          }
+
+          if (donation.time > (Date.now() - weekInMilli)) {
+            donatedThisWeek += donation.amount;
+          }
+        }
+
+        if (donation.receiverID === myAccountID) {
+          receivedToDate += donation.amount;
+
+          if (donation.time > (Date.now() - dayInMilli)) {
+            receivedToday += donation.amount;
+          }
+
+          if (donation.time > (Date.now() - weekInMilli)) {
+            receivedThisWeek += donation.amount;
+          }
+        }
+
+        $("#amount_donated_today").text('$' + (donatedToday / oneHundred).toFixed(2));
+        $("#amount_donated_this_week").text('$' + (donatedThisWeek / oneHundred).toFixed(2));
+        $("#amount_donated_to_date").text('$' + (donatedToDate / oneHundred).toFixed(2));
+
+        $("#amount_received_today").text('$' + (receivedToday / oneHundred).toFixed(2));
+        $("#amount_received_this_week").text('$' + (receivedThisWeek / oneHundred).toFixed(2));
+        $("#amount_received_to_date").text('$' + (receivedToDate / oneHundred).toFixed(2));
+      }
+    } else {
+      console.log("Firebase get request failed: " + error);
+    }
+  });
 }
+
+// if (SAFARI && LEGACY_SAFARI) {
+//   if (navigator.appVersion.indexOf("Mac OS X 10_5_") !== -1) {
+//     // Safari 5.1 isn't available on Leopard (OS X 10.5). Don't urge the users to upgrade in this case.
+//   } else {
+//     $("#safari50_updatenotice").show();
+//   }
+// }
 
 var optionalSettings = {};
 $(document).ready(function(){
-  load_options();
-  rightToLeft();
-  showMiniMenu();
-  displayVersionNumber();
-  displayTranslationCredit();
-  localizePage();
+  // load_options();
+  // rightToLeft();
+  // showMiniMenu();
+  // displayVersionNumber();
+  // displayTranslationCredit();
+  // localizePage();
+  setDonationValues();
 })

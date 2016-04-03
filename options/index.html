@@ -150,7 +150,32 @@
         <div class="container_header">
         Account Stats
         </div>
-        <canvas id="linechart" width="600" height="300"></canvas>
+        <div style="width: 100%; overflow: hidden;">
+          <div style="width: 300px; float: left; margin-left: 40px; margin-top: 40px;">
+            <div id="donation_statistics_header" class="header">You've donated:</div>
+            <div id="donations_today">
+              <span id="amount_donated_today" class="money_text">$0.00</span> today.
+            </div>
+            <div id="donations_this_week">
+              <span id="amount_donated_this_week" class="money_text">$0.00</span> this week.
+            </div>
+            <div id="donations_to_date">
+              <span id="amount_donated_to_date" class="money_text">$0.00</span> to date.
+            </div>
+            <div style="height: 40px"> </div>
+            <div id="donation_statistics_header" class="header">You've received:</div>
+            <div id="donations_today">
+              <span id="amount_received_today" class="money_text">$0.00</span> today.
+            </div>
+            <div id="donations_this_week">
+              <span id="amount_received_this_week" class="money_text">$0.00</span> this week.
+            </div>
+            <div id="donations_to_date">
+              <span id="amount_received_to_date" class="money_text">$0.00</span> to date.
+            </div>
+          </div>
+          <canvas style="float: left;" id="linechart" width="600" height="300"></canvas>
+        </div>
         <script src="scripts/lineChart.js"></script>
         <div class="container_footer">
         </div>
