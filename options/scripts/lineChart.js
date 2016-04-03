@@ -56,7 +56,8 @@ $.get('https://burning-torch-5051.firebaseio.com/donations.json', function(succe
     var skillsChart = new Chart(context).Line(data, {
         scaleShowHorizontalLines: false,
         scaleFontFamily : "'Ubuntu'",
-        pointLabelFontFamily: "'Ubuntu'"
+        pointLabelFontFamily: "'Ubuntu'",
+        scaleIntegersOnly: false
     });
 
 }});
