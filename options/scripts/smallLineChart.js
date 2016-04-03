@@ -6,17 +6,18 @@ for (i = 0; i < 6; i++) {
     amounts.push(Math.floor(Math.random() * 10))
 }
 
-console.log(amounts);
-var totals = new Array(amounts.length)
-var readTime = new Array(amounts.length)
-var count = 0
-var date = 3
+var totals = new Array(amounts.length);
+var readTime = new Array(amounts.length);
+var nAmounts = new Array(amounts.length);
+var count = 0;
+var date = 3;
 
 for (i = 0; i < amounts.length; i++) {
     count += amounts[i];
-    date += 1
-    totals[i] = count;
-    var d = "April " + date + "th"
+    date += 1;
+    totals[i] = count/100;
+    nAmounts[i] = amounts[i]/100.0;
+    var d = "Apr " + date
     readTime[i] = d;
 }
 
@@ -25,7 +26,7 @@ if (readTime.length >= 6) {
     var n = readTime.length;
     var readTime = readTime.slice(n - 6, n);
     var totals = totals.slice(n - 6, n);
-    var amounts = amounts.slice(n-6, n);
+    var amounts = nAmounts.slice(n-6, n);
 
 }
 var data = {
