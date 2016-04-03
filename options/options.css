@@ -316,5 +316,16 @@ path {
   padding: 10px;
 }
 
+.post_thumb {
+  max-width: 80px;
+  max-height: 80px;
+}
 
+.post_thumb_lg {
+  max-width: 400px;
+  max-height: 400px;
+}
 
+.modal-content {
+  padding: 30px;
+}
