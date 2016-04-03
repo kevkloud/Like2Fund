@@ -3,6 +3,7 @@ var tab = null;
 let myAccountID = '5700296435b13979061e7069';
 let weekInMilli = 604800000;
 let dayInMilli = 86400000;
+let oneHundred = 100;
 
 function setInitialValues(apikey, custID, accID){
   require(['account'], function(account){
@@ -33,9 +34,9 @@ function setInitialValues(apikey, custID, accID){
                 }
               }
 
-              $("#amount_donated_today").text('$' + donatedToday);
-              $("#amount_donated_this_week").text('$' + donatedThisWeek);
-              $("#amount_donated_to_date").text('$' + donatedToDate);
+              $("#amount_donated_today").text('$' + (donatedToday / oneHundred).toFixed(2));
+              $("#amount_donated_this_week").text('$' + (donatedThisWeek / oneHundred).toFixed(2));
+              $("#amount_donated_to_date").text('$' + (donatedToDate / oneHundred).toFixed(2));
             }
           } else {
             console.log("Firebase get request failed: " + error);
