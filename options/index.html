@@ -10,7 +10,7 @@
     <script src="../jquery/jquery.cookie.js"></script>
     <script src="../jquery/jquery-ui.custom.min.js"></script>
     <script src="index.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="../node_modules/d3/d3.js"></script>
   </head>
   <body>
@@ -31,6 +31,24 @@
           <div class="container_header">
           Your Posts
           </div>
+          <div id="post_wrapper">
+            <div class="post" data-toggle="modal" data-target="#modal-1">
+              Post1  
+            </div>
+            <div class="post" data-toggle="modal" data-target="#modal-2" >
+              Post2  
+            </div>
+            <div class="post" data-toggle="modal" data-target="#modal-3">
+              Post3  
+            </div>
+            <div class="post">
+              Post4  
+            </div>
+            <div class="post">
+              Post5  
+            </div>
+          </div>
+            
           <div class="container_footer">
           </div>
         </div>
@@ -55,6 +73,30 @@
         </div>
       </div>
     </section>
+
+    <div id="modal-1"class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          ...
+        </div>
+      </div>
+    </div>
+    <div id="modal-2"class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          ...
+        </div>
+      </div>
+    </div>
+    <div id="modal-3"class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          ...
+        </div>
+      </div>
+    </div>
+
+
     <script src="scripts/lineChart.js"></script>
   </body>
 <html>

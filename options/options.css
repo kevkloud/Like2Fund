@@ -302,8 +302,19 @@ path {
 
 
 
+/* -------------------------- */
+#post_wrapper {
+  height: 89%;
+  overflow-y: scroll;
+}
 
-
+.post {
+  background-color: white;
+  margin: 10px;
+  border-radius: 5px;
+  min-height: 75px;
+  padding: 10px;
+}
 
 
 
