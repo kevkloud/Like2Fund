@@ -1,6 +1,7 @@
 body {
   overflow-y: scroll;
-  background: white;
+  background-image: url('../assets/Desktop Landscape.png');
+  background-size: cover;
   font-family: Ubuntu;
 }
 
