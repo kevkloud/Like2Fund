@@ -28,7 +28,7 @@ h3 {
 }
 
 option {
-  background-color: #f5fdec;
+  background-color: #e9eff6;
 }
 
 img {
@@ -60,7 +60,7 @@ div#right_top {
 
 div#account_stats {
   height: 375px;
-  background-color: #f5fdec;
+  background-color: #e9eff6;
   position:relative;
 }
 
@@ -157,6 +157,8 @@ a:hover {
   display:block;
   float:left;
   padding: 30px 10px 0px 106px;
+  height: 500px;
+  background-color: #ffffff;
   display: inline;
 
 }
@@ -313,7 +315,7 @@ h4 {
 
 /* -------------------------- */
 #post_wrapper {
-  background-color: #f5fdec;
+  background-color: #e9eff6;
   height: 89%;
   overflow-y: scroll;
 }
@@ -342,7 +344,7 @@ h4 {
 }
 
 #payment_wrapper {
-  background-color: #f5fdec;
+  background-color: #e9eff6;
   height: 89%;
   overflow-y: scroll;
 }
