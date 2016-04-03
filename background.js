@@ -1,13 +1,5 @@
 var database = new Firebase('https://burning-torch-5051.firebaseio.com/');
 
-$.get('https://burning-torch-5051.firebaseio.com/.json', function(success, error) {
-  if (success) {
-    console.log(success);
-  } else {
-    console.log(error);
-  }
-});
-
 // Open a new tab with a given URL.
 // Inputs:
 //   url: string - url for the tab

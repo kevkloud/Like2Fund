@@ -11,7 +11,7 @@ div {
 input {
   background-color: #dfdfdf;
   text-align: right;
-  width: 50px;
+  width: 80px;
   border: none;
 }
 
@@ -277,10 +277,18 @@ h4 {
 }
 
 
+<<<<<<< f0f17b0a28b50b0121630ed7fd6d688dd0f25466
 
 
 
 
+=======
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+>>>>>>> Get settings info from server
 
 .axis path,
 .axis line {
