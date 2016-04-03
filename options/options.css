@@ -10,7 +10,7 @@ div {
 }
 
 input {
-  background-color: #f5fdec;
+  background-color: #d8d8d8;
   text-align: right;
   width: 80px;
   border: none;
@@ -410,4 +410,26 @@ h4 {
   float:left;
   width:25%;
 
+}
+
+
+div.setting_container_header {
+  height: 5px;
+  background: #FFE566;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 6px;
+}
+
+div.setting_container_footer {
+  height: 5px;
+  background: #FFE566; 
+}
+
+.preference_wrapper {
+  background: #E9EFF6;
+}
+
+.preference_content_wrapper {
+  margin: 10px;
 }

@@ -42,44 +42,52 @@
   </div>
 
   <section id="preferences" class="tab-content active"> 
-    <div id="preference-text">
-      Donation per like
-      <div id="donation-form">
-        $  <input id="amount-text" type="text" placeholder="0.20"><br>
+    <div class="preference_wrapper">
+      <div class="setting_container_header">
       </div>
-    </div>
-    <div id="preference-text">
-      Age
-      <div id="donation-form">
-        <input id="age-text" type="text" placeholder="20"><br>
+      <div class="preference_content_wrapper">
+        <div id="preference-text">
+          Donation per like
+          <div id="donation-form">
+            <input id="amount-text" type="text" placeholder="$0.20"><br>
+          </div>
+        </div>
+        <div id="preference-text">
+          Age
+          <div id="donation-form">
+            <input id="age-text" type="text" placeholder="20"><br>
+          </div>
+        </div>
+        <div id="preference-text">
+          Gender
+          <div id="donation-form">
+            <input id="gender-text" type="text" placeholder="Male"><br>
+          </div>
+        </div>
+        <div id="preference-text">
+          State
+          <div id="donation-form">
+            <input id="state-text" type="text" placeholder="CA"><br>
+          </div>
+        </div>
+        <div id="preference-text">
+          Country
+          <div id="donation-form">
+            <input id="country-text" type="text" placeholder="USA"><br>
+          </div>
+        </div>
+        <div id="preference-text">
+          Payment Confirmation
+          <li class='tg-list-item'>
+            <input class='tgl tgl-flat' id='cb4' type='checkbox'>
+            <label class='tgl-btn' for='cb4'></label>
+          </li>
+        </div>
+        <button id="save-button" type="button" onclick="saveSettings()" class="btn btn-secondary">Save</button>  
       </div>
+      
+      <div class="setting_container_footer"></div>
     </div>
-    <div id="preference-text">
-      Gender
-      <div id="donation-form">
-        <input id="gender-text" type="text" placeholder="Male"><br>
-      </div>
-    </div>
-    <div id="preference-text">
-      State
-      <div id="donation-form">
-        <input id="state-text" type="text" placeholder="CA"><br>
-      </div>
-    </div>
-    <div id="preference-text">
-      Country
-      <div id="donation-form">
-        <input id="country-text" type="text" placeholder="USA"><br>
-      </div>
-    </div>
-    <div id="preference-text">
-      Payment Confirmation
-      <li class='tg-list-item'>
-        <input class='tgl tgl-flat' id='cb4' type='checkbox'>
-        <label class='tgl-btn' for='cb4'></label>
-      </li>
-    </div>
-    <button id="save-button" type="button" onclick="saveSettings()" class="btn btn-secondary">Save</button>
   </section>
 
 <html>
