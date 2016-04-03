@@ -8,17 +8,6 @@ $.get('https://burning-torch-5051.firebaseio.com/.json', function(success, error
   }
 });
 
-
-/*
-var data;
-
-database.on("value", function(snapshot) {
-  data = snapshot.val();
-  console.log(data);
-}, function (errorObject) {
-  console.log("The read failed: " + errorObject.code);
-});
-*/
 // Open a new tab with a given URL.
 // Inputs:
 //   url: string - url for the tab
@@ -40,21 +29,37 @@ function openTab(url) {
 };
 
 function donate(apikey, senderID, receiverID, fbID) {
-  alert("git here");
+  console.log("apikey: " + apikey);
+  console.log("senderID: " + senderID);
+  console.log("receiverID: " + receiverID);
+  console.log("fbID: " + fbID);
 
-  let amount = 10; 
-  //data.customerIDs[senderID].donationAmount;
+  $.get('https://burning-torch-5051.firebaseio.com/accountIDs.json', function(success, error) {
+    if (success) {
+      console.log(success);
 
-  require(['withdrawal'], function(withdrawal){
-    var withdrawalAccount = withdrawal.initWithKey(apikey);
-    var sampleWithdrawal = "{\"medium\": \"balance\",\"amount\": " + amount + ",\"description\": \"test\"}";  
-    console.log("[withdrawal - withdraw an account] Response: " + withdrawalAccount.createWithdrawal(senderID, sampleWithdrawal));
-  });
+      let amount = success[senderID].donationAmount; 
 
-  require(['deposit'], function(deposit) {
-    var depositAccount = deposit.initWithKey(apikey);
-    var sampleDeposit = "{\"medium\": \"balance\",\"status\": \"completed\", \"amount\": " + amount + ",\"description\": \"Dummy Deposit\"}";
-        console.log("[Deposit - New deposit]: " + depositAccount.createDeposit(depositAccount, sampleDeposit));
+      console.log(amount);
+
+      require(['withdrawal'], function(withdrawal){
+        var withdrawalAccount = withdrawal.initWithKey(apikey);
+        var sampleWithdrawal = "{\"medium\": \"balance\",\"amount\": " + amount + ",\"description\": \"test\"}";  
+        console.log("[withdrawal - withdraw an account] Response: " + withdrawalAccount.createWithdrawal(senderID, sampleWithdrawal));
+      });
+
+      require(['deposit'], function(deposit) {
+        var depositAccount = deposit.initWithKey(apikey);
+        var sampleDeposit = "{\"medium\": \"balance\",\"status\": \"completed\", \"amount\": " + amount + ",\"description\": \"Dummy Deposit\"}";
+            console.log("[Deposit - New deposit]: " + depositAccount.createDeposit(receiverID, sampleDeposit));
+      });
+
+      let time = Date.now();
+
+      database.child('donations').push({ 'senderID' : senderID, 'receiverID' : receiverID, 'amount' : amount, 'time' : time});
+    } else {
+      console.log("Firebase get request failed: " + error);
+    }
   });
 }
 
