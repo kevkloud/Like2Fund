@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="options.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src="../jquery/jquery.min.js"></script>
     <script src="../jquery/jquery.cookie.js"></script>
     <script src="../jquery/jquery-ui.custom.min.js"></script>
-    <script src="index.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src = "chartJS/Chart.min.js"></script>
     <script type="text/javascript" src="d3/d3.min.js"></script>
+    <script src="index.js"></script>
+    <script src="settings.js"></script>
   </head>
   <body>
     <header id="header">
@@ -43,25 +46,31 @@
     <div id="preference-text">
       Donation per like
       <div id="donation-form">
-        $  <input type="text" placeholder="0.20"><br>
+        $  <input id="amount-text" type="text" placeholder="0.20"><br>
       </div>
     </div>
     <div id="preference-text">
       Age
       <div id="donation-form">
-        <input type="text" placeholder="20"><br>
+        <input id="age-text" type="text" placeholder="20"><br>
+      </div>
+    </div>
+    <div id="preference-text">
+      Gender
+      <div id="donation-form">
+        <input id="gender-text" type="text" placeholder="Male"><br>
       </div>
     </div>
     <div id="preference-text">
       State
       <div id="donation-form">
-        <input type="text" placeholder="CA"><br>
+        <input id="state-text" type="text" placeholder="CA"><br>
       </div>
     </div>
     <div id="preference-text">
       Country
       <div id="donation-form">
-        <input type="text" placeholder="USA"><br>
+        <input id="country-text" type="text" placeholder="USA"><br>
       </div>
     </div>
     <div id="preference-text">
@@ -72,6 +81,7 @@
       </li>
     </div>
 
-  <script src="scripts/lineChart.js"></script>
-  </body>
+
+  
+
 <html>
