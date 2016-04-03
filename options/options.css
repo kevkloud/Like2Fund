@@ -9,7 +9,7 @@ div {
 }
 
 input {
-  background-color: #dfdfdf;
+  background-color: #f5fdec;
   text-align: right;
   width: 80px;
   border: none;
@@ -27,7 +27,7 @@ h3 {
 }
 
 option {
-  background-color: #dfdfdf;
+  background-color: #f5fdec;
 }
 
 img {
@@ -59,7 +59,7 @@ div#right_top {
 
 div#account_stats {
   height: 375px;
-  background: #E9EFF6;
+  background-color: #f5fdec;
   position:relative;
 }
 
@@ -305,6 +305,7 @@ h4 {
 
 /* -------------------------- */
 #post_wrapper {
+  background-color: #f5fdec;
   height: 89%;
   overflow-y: scroll;
 }
@@ -333,6 +334,7 @@ h4 {
 }
 
 #payment_wrapper {
+  background-color: #f5fdec;
   height: 89%;
   overflow-y: scroll;
 }
@@ -351,13 +353,15 @@ h4 {
 
 .payment_amount {
 
-  color:#00b33c;
+  color:#6BA12C;
 }
 
 
 .footer_tabs{
   margin-top: 50px;
   margin: auto;
+  position: absolute;
+  padding-bottom: 10px;
 }
 .modal_tab {
   margin:auto;
@@ -369,15 +373,34 @@ h4 {
 }
 
 #map {
-  float:center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #linechart {
   float: right;
   padding: 20px 30px 0px 20px;
+  margin-left: 15%;
 }
 
 #linechart-small {
   float: left;
-  padding: 10px 20px 10px 15px;
+  padding: 70px 20px 10px 15px;
+}
+
+#piechart {
+  float: right;
+  padding: 70px 70px 70px 70px;
+}
+
+
+.chart {
+  text-align: center;
+}
+
+#accountlabel {
+  float:left;
+  width:25%;
+
 }

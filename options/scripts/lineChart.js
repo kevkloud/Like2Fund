@@ -17,7 +17,7 @@ $.get('https://burning-torch-5051.firebaseio.com/donations.json', function(succe
         count += amounts[i];
         date += 1
         totals[i] = count;
-        var d = "April " + date + "th"
+        var d = "Apr " + date
         readTime[i] = d;
     }
     
@@ -34,22 +34,18 @@ $.get('https://burning-torch-5051.firebaseio.com/donations.json', function(succe
         datasets: [
             {
                 label: "Total Cash Raised",
-                fillColor: "rgba(232,137,137,0)",
-                strokeColor: "rgba(232,137,137,1)",
-                pointColor: "rgba(232,137,137,1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(232,137,137,1)",
+                fillColor: "rgba(180,180,180,0)",
+                strokeColor: "rgba(180,180,180,0.8)",
+                highlightFill: "rgba(180,180,180,0.75)",
+                highlightStroke: "rgba(180,180,180,1)",
                 data: totals
             },
             {
                 label: "Daily Cash",
-                fillColor: "rgba(109,158,225,0)",
-                strokeColor: "rgba(109,158,225,1)",
-                pointColor: "rgba(109,158,225,1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(109,158,225,1)",
+                fillColor: "rgba(151,187,205,0)",
+                strokeColor: "rgba(151,187,205,0.8)",
+                highlightFill: "rgba(151,187,205,0.75)",
+                highlightStroke: "rgba(151,187,205,1)",
                 data: amounts
             }
         ]

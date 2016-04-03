@@ -150,10 +150,8 @@
         <div class="container_header">
         Account Stats
         </div>
-
         <canvas id="linechart" width="600" height="300"></canvas>
         <script src="scripts/lineChart.js"></script>
-
         <div class="container_footer">
         </div>
       </div>
@@ -161,22 +159,24 @@
 
     <div id="modal-1"class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
       <div class="modal-dialog modal-lg">
-        <div class="modal-content">
+        <div class="modal-content" style="background-color:#f5fdec;">
           <div class="media" id="media-1">
             <div class="media-body">
               <h1 class="media-heading">Pittsburgh Soup Kitchen Funds</h1>
-              <p>Total amount raised : <span>$713.62</span></p>
-              <canvas id="linechart-small" width="400" height="220"></canvas>
-              <script src="scripts/smallLineChart.js"></script>
-            </div>
-            <div class="media-right">
-              <a href="#">
-                <img class="media-object post_thumb_lg" src="https://activerain-store.s3.amazonaws.com/image_store/uploads/agents/jackieconnellyfornuff/files/Soup%20Kitchen.gif" alt="...">
-              </a>
+              <p>Total amount raised : <span style="color:#6BA12C;">$713.62</span></p>
+              <div class="chart">
+                <p>By Date</p>
+                <canvas id="linechart-small" width="430" height="340"></canvas>
+                <script src="scripts/smallLineChart.js"></script>
+              </div>
+              <div class="chart">
+                <canvas id="piechart" width="400" height="400"></canvas>
+                <script src="scripts/pieChart.js"></script>
+              </div>
             </div>
           </div>
           <img id="map" src="../assets/map.png" alt=""> 
-          <div class="footer_tabs">
+          <div class="footer_tabs" style="position: absolute; bottom: 0; bottom-padding: 10px;">
             <div class="btn-group" role="group" aria-label="Basic example">
               <button type="button" class="btn btn-secondary" value="true" id="info-1">Info</button>
               <button type="button" class="btn btn-secondary" value="false" id="map-1">Map</button>
