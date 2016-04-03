@@ -1,16 +1,3 @@
-function timeConverter(UNIX_timestamp){
-  var a = new Date(UNIX_timestamp * 1000);
-  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  var year = a.getFullYear();
-  var month = months[a.getMonth()];
-  var date = a.getDate();
-  var hour = a.getHours();
-  var min = a.getMinutes();
-  var sec = a.getSeconds();
-  var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
-  return time;
-}
-
 $.get('https://burning-torch-5051.firebaseio.com/donations.json', function(success, error) {
 
     if (success) {
@@ -47,29 +34,31 @@ $.get('https://burning-torch-5051.firebaseio.com/donations.json', function(succe
         datasets: [
             {
                 label: "Total Cash Raised",
-                fillColor: "rgba(220,220,220,0.2)",
-                strokeColor: "rgba(220,220,220,1)",
-                pointColor: "rgba(220,220,220,1)",
+                fillColor: "rgba(232,137,137,0)",
+                strokeColor: "rgba(232,137,137,1)",
+                pointColor: "rgba(232,137,137,1)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,1)",
+                pointHighlightStroke: "rgba(232,137,137,1)",
                 data: totals
             },
             {
                 label: "Daily Cash",
-                fillColor: "rgba(151,187,205,0.2)",
-                strokeColor: "rgba(151,187,205,1)",
-                pointColor: "rgba(151,187,205,1)",
+                fillColor: "rgba(109,158,225,0)",
+                strokeColor: "rgba(109,158,225,1)",
+                pointColor: "rgba(109,158,225,1)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(151,187,205,1)",
+                pointHighlightStroke: "rgba(109,158,225,1)",
                 data: amounts
             }
         ]
     };
     var context = document.getElementById('linechart').getContext('2d');
     var skillsChart = new Chart(context).Line(data, {
-        scaleShowHorizontalLines: false
+        scaleShowHorizontalLines: false,
+        scaleFontFamily : "'Ubuntu'",
+        pointLabelFontFamily: "'Ubuntu'"
     });
 
 }});
