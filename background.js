@@ -15,15 +15,6 @@ $.get('https://burning-torch-5051.firebaseio.com/.json', function(success, error
 var monetizedPosts = new Firebase('https://burning-torch-5051.firebaseio.com/monetizedPosts');
 var database = new Firebase('https://burning-torch-5051.firebaseio.com/');
 
-var data;
-
-database.on("value", function(snapshot) {
-  data = snapshot.val();
-  console.log(data);
-}, function (errorObject) {
-  console.log("The read failed: " + errorObject.code);
-});
-
 function openTab(url) {
     chrome.tabs.create({ url: url})
 };
@@ -66,7 +57,7 @@ function donate(apikey, senderID, receiverID, fbID) {
 chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
   console.log(message);
   if (message.meth == "donate"){
-    donate(message.key, message.acc);
+    donate(message.key, message.sender, message.receiver, message.fbID);
     sendResponse({stat : "complete"});  
   }
   else if (message.meth == "updateMonetized"){

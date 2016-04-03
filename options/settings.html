@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+  <meta charset="utf-8">
   <head>
     <title>LikeFund - Settings</title>
     <link rel="stylesheet" href="../jquery/css/jquery-ui.custom.css" />
@@ -11,6 +12,7 @@
     <script src="../jquery/jquery-ui.custom.min.js"></script>
     <script src="index.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../node_modules/d3/d3.min.js"></script>
   </head>
   <body>
     <header id="header">
@@ -38,26 +40,36 @@
   </div>
 
   <section id="preferences" class="tab-content active"> 
-    Donation per like
-    <div id="donation-form">
-      $  <input type="text" value="0.20"><br>
+    <div id="preference-text">
+      Donation per like
+      <div id="donation-form">
+        $  <input type="text" placeholder="0.20"><br>
+      </div>
     </div>
-    <div id="confirmation">
+    <div id="preference-text">
+      Age
+      <div id="donation-form">
+        <input type="text" placeholder="20"><br>
+      </div>
+    </div>
+    <div id="preference-text">
+      State
+      <div id="donation-form">
+        <input type="text" placeholder="CA"><br>
+      </div>
+    </div>
+    <div id="preference-text">
+      Country
+      <div id="donation-form">
+        <input type="text" placeholder="USA"><br>
+      </div>
+    </div>
+    <div id="preference-text">
       Payment Confirmation
       <li class='tg-list-item'>
         <input class='tgl tgl-flat' id='cb4' type='checkbox'>
         <label class='tgl-btn' for='cb4'></label>
       </li>
     </div>
-    <div id="age-form">
-
-    </div>
-  </section>
-
-
-
-  <section
-
-
   </body>
 <html>
