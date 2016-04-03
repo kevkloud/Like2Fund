@@ -164,7 +164,7 @@ a:hover {
 }
 
 #preferences {
-  display:block;
+  display: block;
   float: left;
   width: 30%;
   padding: 30px 10px 0px 13px;
@@ -172,13 +172,14 @@ a:hover {
   font-family: Ubuntu;
 }
 
+#preference-text {
+  padding-bottom: 10px;
+}
+
 #donation-form {
   float: right;
 }
 
-#confirmation {
-  padding-top: 10px;
-}
 
 
 
