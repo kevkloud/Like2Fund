@@ -12,7 +12,7 @@ $.get('https://burning-torch-5051.firebaseio.com/donations.json', function(succe
     var nAmounts = new Array(amounts.length)
     var readTime = new Array(amounts.length)
     var count = 0.0
-    var date = 3
+    var date = -10
 
     for (i = 0; i < amounts.length; i++) {
         count += amounts[i];
