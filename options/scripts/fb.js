@@ -1,18 +1,35 @@
-$(document).ready(function() {
-  $.ajaxSetup({ cache: true });
-  $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
-    FB.init({
-      appId: '1732064593678722',
-      version: 'v2.5' // or v2.0, v2.1, v2.2, v2.3
-    });     
+
+
+
+$(function() {
+  $("#map").hide();
+   $("#map-1").attr("value", "false");
+   $("#info-1").attr("value", "true");
+
+
+  console.log("started");
+  $("#info-1").click(function(){
+    console.log("info clicked");
+    if ($(this).attr("value") === "false"){
+      console.log("switching to info");
+      $(this).attr("value", "true");
+      $("#map-1").attr("value", "false");
+      $("#map").hide();
+      $("#media-1").show();
+    }
+  });
+
+  $("#map-1").click(function(){
+    console.log("map clicked");
+    console.log($(this).attr("value"));
     
-    FB.api(
-      "/{post-id}",
-      function (response) {
-        if (response && !response.error) {
-          console.log(response);
-        }
-      }
-    );
+    if ($(this).attr("value") === "false"){
+      console.log("switching to map");
+      $(this).attr("value", "true");
+      $("#info-1").attr("value", "false");
+      $("#media-1").hide();
+      $("#map").show();
+    }
   });
 });
+

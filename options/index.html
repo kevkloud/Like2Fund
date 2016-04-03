@@ -11,7 +11,8 @@
     <script src="../jquery/jquery-ui.custom.min.js"></script>
     <script src="index.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
-    <script src="chartJS/Chart.js"></script>
+    <script src = "chartJS/Chart.js"></script>
+    <script src = "scripts/fb.js"></script>
 
   </head>
   <body>
@@ -161,7 +162,7 @@
     <div id="modal-1"class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
-          <div class="media">
+          <div class="media" id="media-1">
             <div class="media-body">
               <h1 class="media-heading">Pittsburgh Soup Kitchen Funds</h1>
               <p>Total amount raised : <span>$713.62</span></p>
@@ -173,11 +174,12 @@
                 <img class="media-object post_thumb_lg" src="https://activerain-store.s3.amazonaws.com/image_store/uploads/agents/jackieconnellyfornuff/files/Soup%20Kitchen.gif" alt="...">
               </a>
             </div>
-          </div> 
+          </div>
+          <img id="map" src="../assets/map.png" alt=""> 
           <div class="footer_tabs">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary">Info</button>
-              <button type="button" class="btn btn-secondary">Map</button>
+              <button type="button" class="btn btn-secondary" value="true" id="info-1">Info</button>
+              <button type="button" class="btn btn-secondary" value="false" id="map-1">Map</button>
             </div>
           </div>
         </div>
@@ -198,6 +200,6 @@
       </div>
     </div>
     
-    
+
   </body>
 <html>

@@ -364,6 +364,13 @@ h4 {
   text-align: center
 }
 
+.modal-content {
+  height:600px !important;
+}
+
+#map {
+  float:center;
+}
 
 #linechart {
   float: right;
