@@ -70,21 +70,9 @@ chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
     sendResponse({stat : "complete"});  
   }
   else if (message.meth == "updateMonetized"){
-    var res;
-    $.get('https://burning-torch-5051.firebaseio.com/monetizedPosts.json', function(success, error) {
-      if (success) {
-        console.log(success);
-        if (success[parseInt(message.postId)] != null){
-          res = true;    
-        }
-        else {
-          res = false;
-        }
-      } else {
-        console.log(error);
-      }
-        console.log("res : " + res);
-        sendResponse({stat : "complete", isMon : res});
-    });
+    var fid = message.fbID;
+    var cid = message.acc;
+    monetizedPosts.push({'postID' : fid, 'receiverID' : cid});
+    sendResponse({stat : "complete"});  
   }
 });
