@@ -1,0 +1,23 @@
+{
+  "name": "like2fund",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "dependencies": {
+    "d3": "^3.5.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevkloud/Like2Fund.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevkloud/Like2Fund/issues"
+  },
+  "homepage": "https://github.com/kevkloud/Like2Fund#readme"
+}
