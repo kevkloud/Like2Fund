@@ -34,56 +34,62 @@ ul {
 }
 
 section {
-    height: 200px;
-    background: aqua;
+    height: 375px;
     margin: auto;
     margin: 40px;
 }
 div#left_top {
-    width: 50%;
-    height: 200px;
+    width: 45%;
+    height: 375px;
     background: red;
     float: left;
-    padding-right: 20px;
 }
 div#right_top {
-    margin-left: 50%;
-    height: 200px;
+    margin-left: 55%;
+    height: 375px;
     background: black;
-    padding-left: 20px;
 }
 
 div#account_stats {
-  height: 200px;
-  background: green;
-  margin: 0px 40px 40px 40px;
+  height: 375px;
+  background: #E9EFF6;
   position:relative;
 }
 
 div#your_posts {
   height: 100%;
   width: 100%;
-  background: orange;
+  background: #E9EFF6;
   position:relative;
 }
 
 div#payment_history {
   height: 100%;
   width: 100%;
-  background: orange;
+  background: #E9EFF6;
   position:relative;
 }
 
 div.container_header {
   height: 40px;
   background: #FFE566;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 6px;
 }
 
 div.container_footer {
   height: 5px;
+  width: 100%;
   background: #FFE566;
   position:absolute;
   bottom:0px;
+}
+
+div.data_visual {
+  height: 50%;
+  width: 50%;
+
 }
 
 ul#nav-items li{
