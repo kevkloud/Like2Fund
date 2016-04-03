@@ -99,10 +99,16 @@ ul#nav-items li{
   padding: 30px;
 }
 
+#nav-items li a {
+  color:black ;
+  text-decoration: none;
+}
+
 a:hover {
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  color: red;
+  color: #337ab7 !important;
+  text-decoration: none;
 }
 
 #header {
@@ -277,19 +283,6 @@ h4 {
 }
 
 
-<<<<<<< f0f17b0a28b50b0121630ed7fd6d688dd0f25466
-
-
-
-
-=======
-path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
->>>>>>> Get settings info from server
-
 .axis path,
 .axis line {
   fill: none;
@@ -332,8 +325,41 @@ path {
 .post_thumb_lg {
   max-width: 400px;
   max-height: 400px;
+  border:solid black 1px;
 }
 
 .modal-content {
   padding: 30px;
+}
+
+#payment_wrapper {
+  height: 89%;
+  overflow-y: scroll;
+}
+
+.payment {
+  display: inline-block;
+  background-color: white;
+  margin: 10px 25px 10px 25px;
+  width: 120px;
+  height: 175px;
+  border-radius: 20px;
+  padding: 15px;
+  
+
+}
+
+.payment_amount {
+
+  color:#00b33c;
+}
+
+
+.footer_tabs{
+  margin-top: 50px;
+  margin: auto;
+}
+.modal_tab {
+  margin:auto;
+  text-align: center
 }
