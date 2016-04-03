@@ -7,8 +7,8 @@ let oneHundred = 100;
 
 function setInitialValues(apikey, custID, accID){
   require(['account'], function(account){
-        var accounts =  account.initWithKey(apikey);
-        $("#account_balance").text('$' + parseFloat(accounts.getAccountById(accID).balance).toFixed(2));
+        //var accounts =  account.initWithKey(apikey);
+        //$("#account_balance").text('$' + parseFloat(accounts.getAccountById(accID).balance).toFixed(2));
 
         // Calculate your donation stats
         $.get('https://burning-torch-5051.firebaseio.com/donations.json', function(success, error) {
