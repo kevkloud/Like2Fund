@@ -1,63 +1,41 @@
+var pieData = [
+   {
+      value: 25,
+      label: 'Java',
+      color: '#811BD6'
+   },
+   {
+      value: 10,
+      label: 'Scala',
+      color: '#9CBABA'
+   },
+   {
+      value: 30,
+      label: 'PHP',
+      color: '#D18177'
+   },
+   {
+      value : 35,
+      label: 'HTML',
+      color: '#6AE128'
+   }
+];
 
-// Set the dimensions of the canvas / graph
-var margin = {top: 30, right: 20, bottom: 30, left: 50},
-    width = 600 - margin.left - margin.right,
-    height = 270 - margin.top - margin.bottom;
- 
-// Parse the date / time
-var parseDate = d3.time.format("%d-%b-%y").parse;
- 
-// Set the ranges
-var x = d3.time.scale().range([0, width]);
-var y = d3.scale.linear().range([height, 0]);
- 
-// Define the axes
-var xAxis = d3.svg.axis().scale(x)
-    .orient("bottom").ticks(5);
- 
-var yAxis = d3.svg.axis().scale(y)
-    .orient("left").ticks(5);
- 
-// Define the line
-var valueline = d3.svg.line()
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.close); });
-    
-// Adds the svg canvas
-var svg = d3.select("body")
-    .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
- 
-// Get the data
-d3.csv("data/data.csv", function(data) {
-    console.log(data);
-    data.forEach(function(d) {
-        d.date = parseDate(d.date);
-        d.close = +d.close;
-    });
- 
-    // Scale the range of the data
-    x.domain(d3.extent(data, function(d) { return d.date; }));
-    y.domain([0, d3.max(data, function(d) { return d.close; })]);
- 
-    // Add the valueline path.
-    svg.append("path")  
-        .attr("class", "line")
-        .attr("d", valueline(data));
- 
-    // Add the X Axis
-    svg.append("g")     
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
- 
-    // Add the Y Axis
-    svg.append("g")     
-        .attr("class", "y axis")
-        .call(yAxis);
- 
-});
- 
+var lineData = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        {
+            label: "My First dataset",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [65, 59, 80, 81, 56, 55, 40]
+        }
+    ]
+};
+
+var context = document.getElementById('skills').getContext('2d');
+var skillsChart = new Chart(context).Line(lineData);
