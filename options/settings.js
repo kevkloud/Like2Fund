@@ -1,7 +1,7 @@
 let myAccountID = '5700296435b13979061e7069';
 let oneHundred = 100;
 
-//var accountIDs = new Firebase('https://burning-torch-5051.firebaseio.com/accountIDs');
+var accountIDs = new Firebase('https://burning-torch-5051.firebaseio.com/accountIDs');
 
 $.get('https://burning-torch-5051.firebaseio.com/accountIDs.json', function(success, error) {
     if (success) {
@@ -18,3 +18,7 @@ $.get('https://burning-torch-5051.firebaseio.com/accountIDs.json', function(succ
       console.log("Firebase get request failed: " + error);
     }
   });
+
+function saveSettings() {
+  accountIDs.child(myAccountID);
+}
